@@ -53,7 +53,7 @@ const Header = ({children}) => {
         }
         headRef.current.addEventListener('scroll', handleScroll)
         return () => {
-            headRef.current.removeEventListener('scroll', handleScroll)
+            headRef.current?.removeEventListener('scroll', handleScroll)
         }
     }, [])
     return (
