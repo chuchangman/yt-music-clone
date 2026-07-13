@@ -15,13 +15,13 @@ interface GenreListCarouselProps{
     title:string;
     subTitle?:string;
     Thumbnail?:React.ReactNode;
-    songlistTop10:TopSong[];
+    genreList:string[];
 }
 
-const SongColumn = ({ songList = [] }: { songList: TopSong[] }) => {
+const GenreColumn = ({ genreList = [] }: { genreList: string[] }) => {
   return <div className='flex flex-col gap-4'>
-    {songList.map((song, idx) => {
-      return <SongCard key={idx} song={song}/>
+    {genreList.map((gennre, idx) => {
+      return <div></div>
     })}
   </div>
 }
@@ -30,9 +30,9 @@ const GenreListCarousel:React.FC<GenreListCarouselProps> = ({
     title,
     subTitle,
     Thumbnail,
-    songlistTop10,
+    genreList,
 }) => {
-  const chunkedTop10SongList = chunkArray(songlistTop10, 4) as TopSong[][]
+  const chunkedGenreList = chunkArray(genreList, 4) as string[][]
   return (
     <div className='w-full'>
       <Carousel>
@@ -53,10 +53,10 @@ const GenreListCarousel:React.FC<GenreListCarouselProps> = ({
         </div>
         <CarouselContent className='mt-4'>
           {
-            chunkedTop10SongList?.map((songList, index) => {
+            chunkedGenreList?.map((genreList, index) => {
               return (
                 <CarouselItem key={index} className="lg:basis-1/2">
-                  <SongColumn songList={songList}/>
+                  <GenreColumn genreList={genreList}/>
                 </CarouselItem>
               )
             })}

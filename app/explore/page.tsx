@@ -4,6 +4,8 @@ import Category from './components/Category'
 import { getAllPlaylist, getSongListTop10 } from '@/lib/dummyData'
 import PlayListCarousel from '@/components/PlayListCarousel'
 import SongListCarousel from '@/components/SongPlayListCarousel'
+import { dymmyGenreList } from '@/lib/dummyData'
+import GenreListCarousel from '@/components/GenreListCarousel'
 const page = async () => {
 
   // const playlistArray = await getAllPlaylist()
@@ -25,6 +27,7 @@ const page = async () => {
         title='인기곡'
       />
       <div className='mt-20'></div>
+      <GenreListCarousel genreList={dymmyGenreList}/>
       <div className='mt-20'></div>
       <div className='mt-20'></div>
     </PagePadding>
