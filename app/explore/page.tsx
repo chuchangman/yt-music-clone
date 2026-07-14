@@ -27,7 +27,7 @@ const page = async () => {
         title='인기곡'
       />
       <div className='mt-20'></div>
-      <GenreListCarousel genreList={dymmyGenreList}/>
+      <GenreListCarousel genreList={dymmyGenreList} title='분위기 및 장르'/>
       <div className='mt-20'></div>
       <div className='mt-20'></div>
     </PagePadding>

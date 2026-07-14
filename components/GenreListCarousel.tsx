@@ -7,9 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import PlayListCard from './PlayListCard'
 import { chunkArray } from '@/lib/utils';
-import SongCard from './SongCard';
+import GenreCard from './GenreCard'
 
 interface GenreListCarouselProps{
     title:string;
@@ -20,8 +19,8 @@ interface GenreListCarouselProps{
 
 const GenreColumn = ({ genreList = [] }: { genreList: string[] }) => {
   return <div className='flex flex-col gap-4'>
-    {genreList.map((gennre, idx) => {
-      return <div></div>
+    {genreList.map((genre) => {
+      return <GenreCard key={genre} genre={genre}/>
     })}
   </div>
 }
@@ -55,7 +54,7 @@ const GenreListCarousel:React.FC<GenreListCarouselProps> = ({
           {
             chunkedGenreList?.map((genreList, index) => {
               return (
-                <CarouselItem key={index} className="lg:basis-1/2">
+                <CarouselItem key={index} className="basis-1/3 lg:basis-1/2">
                   <GenreColumn genreList={genreList}/>
                 </CarouselItem>
               )
