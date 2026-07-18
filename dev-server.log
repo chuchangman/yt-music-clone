@@ -3,16 +3,10 @@
 > next dev
 
    ▲ Next.js 14.1.0
-   - Local:        http://localhost:3001
+   - Local:        http://localhost:3000
 
- ✓ Ready in 1281ms
+ ✓ Ready in 1666ms
  ○ Compiling / ...
- ✓ Compiled / in 2.9s (510 modules)
- ✓ Compiled in 103ms (245 modules)
- ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 674ms (293 modules)
- ✓ Compiled in 230ms (538 modules)
- ✓ Compiled in 105ms (538 modules)
- ✓ Compiled in 109ms (538 modules)
- ✓ Compiled in 111ms (538 modules)
-[?25h
+ ✓ Compiled / in 4.2s (976 modules)
+ ✓ Compiled /favicon.ico in 357ms (530 modules)
+ ✓ Compiled in 648ms (983 modules)
